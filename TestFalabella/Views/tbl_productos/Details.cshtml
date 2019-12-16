@@ -1,0 +1,50 @@
+﻿@model TestFalabella.Models.tbl_productos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fk_tipo_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fk_tipo_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.costo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.costo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pk_codigo_producto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

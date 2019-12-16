@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TestFalabella.Models.tbl_pedidos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codigo_empresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_costo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.observaciones)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codigo_asesor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo_empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_costo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.observaciones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo_asesor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.pk_id_pedido }) |
+            @Html.ActionLink("Details", "Details", new { id=item.pk_id_pedido }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.pk_id_pedido })
+        </td>
+    </tr>
+}
+
+</table>

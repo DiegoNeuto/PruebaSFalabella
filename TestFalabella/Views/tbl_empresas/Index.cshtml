@@ -1,0 +1,82 @@
+﻿@model IEnumerable<TestFalabella.Models.tbl_empresas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-bordered  dataTables-example">
+    <tr>
+        <th>
+            Nombre Cliente
+        </th>
+        <th>
+            NIT
+        </th>
+        <th>
+            Direccion
+        </th>
+        <th>
+            Contacto
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre_cliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contacto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ciudad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.pk_codigo_cliente }) |
+                @Html.ActionLink("Details", "Details", new { id = item.pk_codigo_cliente }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.pk_codigo_cliente })
+            </td>
+        </tr>
+    }
+
+</table>

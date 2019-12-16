@@ -1,0 +1,90 @@
+﻿@model TestFalabella.Models.tbl_empresas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_empresas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contacto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contacto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pk_codigo_cliente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
